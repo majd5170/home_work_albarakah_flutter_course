@@ -6,7 +6,9 @@ import 'package:dio/dio.dart';
 
 
 class HomsPageProduct extends StatelessWidget {
-  const HomsPageProduct({super.key});
+  // const HomsPageProduct({super.key});
+
+  TextEditingController textfild = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +22,10 @@ class HomsPageProduct extends StatelessWidget {
           },
           destinations: [
             NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Icons.home), label: ''),
-            NavigationDestination(icon: Icon(Icons.home), label: ''),
-            NavigationDestination(icon: Icon(Icons.home), label: ''),
+            NavigationDestination(icon: Icon(Icons.favorite), label: ''),
+            NavigationDestination(icon: Icon(Icons.shopping_bag_outlined), label: ''),
+            // find name icon
+            NavigationDestination(icon: Icon(Icons.report), label: ''),
           ]),
         appBar: AppBar(
           leading: Padding(
@@ -60,11 +63,24 @@ class HomsPageProduct extends StatelessWidget {
                   width: 275,
                   height: 50,
                   child: TextField(
+                    // onChanged: (value){
+                    //   if(enterdkeyword.isEmpy){
+                    //   }else{
+                    //   }
+                    // },
+                      controller: textfild,
                      decoration: InputDecoration(
+                        // labelText: ,
+                        
+                        suffixIcon: Icon(Icons.search),
                         border: OutlineInputBorder(
+                          
                         borderRadius: BorderRadius.circular(10)),
                         
+                        
                         ),
+                        
+                    
                   )
                   ),
                   Container(
